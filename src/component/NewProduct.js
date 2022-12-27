@@ -23,7 +23,7 @@ export default function NewProduct() {
             setLoading(false)
         }
         getProduct();
-    }, [])
+    }, [id])
 
     const Loading = () => {
         return (
@@ -49,7 +49,7 @@ export default function NewProduct() {
                 </p>
                 <h3 className='fw-bold display-6 my-4'>$ {product.price}</h3>
                 <p className='lead'>{product.description}</p>
-                <button className='btn btn-outline-dark me-2' onClick={()=>addProduct()}>Add to cart </button>
+                <button className='btn btn-outline-dark me-2' onClick={()=>addProduct(product)}>Add to cart </button>
                 <NavLink className='btn btn-dark me-2' to='/cart'>Go to cart </NavLink>
                 </div>
             </>
